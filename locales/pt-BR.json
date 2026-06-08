@@ -1,0 +1,13 @@
+{
+    "nav_homepage": "Início",
+    "nav_about": "Sobre Nós",
+    "nav_contact": "Contato",
+    "nav_login": "Entrar",
+    "nav_register": "Registrar-se",
+    "game_title": "Desafio Diário",
+    "game_already_played": "Você já completou o desafio de hoje! Volte amanhã para ver um novo título.",
+    "game_stats": "Suas estatísticas — Jogadas: {played} | Vitórias: {won} | Sequência atual: {streak} 🔥",
+    "feedback_correct": "🎉 Correto!",
+    "feedback_incorrect": "❌ Incorreto. Tente novamente para descobrir o truque!",
+    "news_title": "💡 Aumente sua Sabedoria: Feed de Alfabetização Midiática"
+}

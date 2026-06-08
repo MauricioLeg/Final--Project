@@ -1,0 +1,13 @@
+{
+    "nav_homepage": "ホーム",
+    "nav_about": "私たちについて",
+    "nav_contact": "お問い合わせ",
+    "nav_login": "ログイン",
+    "nav_register": "登録",
+    "game_title": "毎日のチャレンジ",
+    "game_already_played": "今日のチャレンジはすでに完了しました！明日新しいお題をチェックしましょう。",
+    "game_stats": "あなたの統計 — プレイ数: {played} | 勝利数: {won} | 現在の連勝: {streak} 🔥",
+    "feedback_correct": "🎉 正解！",
+    "feedback_incorrect": "❌ 不正解。もう一度挑戦してコツを見つけよう！",
+    "news_title": "💡 知識を高めよう: メディアリテラシーフィード"
+}

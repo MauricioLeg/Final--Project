@@ -1,0 +1,13 @@
+{
+    "nav_homepage": "홈페이지",
+    "nav_about": "소개",
+    "nav_contact": "문의하기",
+    "nav_login": "로그인",
+    "nav_register": "회원가입",
+    "game_title": "오늘의 챌린지",
+    "game_already_played": "오늘의 챌린지를 이미 완료하셨습니다! 내일 새로운 뉴스로 다시 찾아와주세요.",
+    "game_stats": "내 통계 — 플레이 횟수: {played} | 우승: {won} | 현재 스트릭: {streak} 🔥",
+    "feedback_correct": "🎉 정답입니다!",
+    "feedback_incorrect": "❌ 오답입니다. 트릭을 다시 찾아보세요!",
+    "news_title": "💡 지혜 키우기: 미디어 리터러시 피드"
+}

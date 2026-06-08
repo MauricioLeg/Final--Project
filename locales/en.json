@@ -1,0 +1,13 @@
+{
+    "nav_homepage": "Homepage",
+    "nav_about": "About Us",
+    "nav_contact": "Contact Us",
+    "nav_login": "Log In",
+    "nav_register": "Register",
+    "game_title": "Daily Challenge",
+    "game_already_played": "You already completed today's challenge! Come back tomorrow for a new headline.",
+    "game_stats": "Your stats — Played: {played} | Won: {won} | Current streak: {streak} 🔥",
+    "feedback_correct": "🎉 Correct!",
+    "feedback_incorrect": "❌ Incorrect. Try again to spot the trick!",
+    "news_title": "💡 Grow Your Wisdom: Media Literacy Feed"
+}

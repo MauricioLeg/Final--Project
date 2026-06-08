@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #571560;
+    --secondary-color: #8d5c93;
+    --third-color: #a8a8a8;
+    --accent-color-1: #ffffff;
+    --accent-color-2: #000000;
+    --font-base: 'Segoe UI';
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+}
+
+/********************** Navigation bar style **********************/
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    margin: 0;
+    align-items: center;
+    align-self: center;
+}
+.navBar a,
+.navBar p {
+    color: var(--accent-color-1);
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.navBar a:hover {
+    background-color: #6d1a78;
+}
+
+.log-lang {
+    display: flex;
+}
+#language {
+    background-color: var(--primary-color);
+    border: none;
+    font-size: large;
+}
+
+/*********************** Main content ***********************/
+main {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.puzzle-card {
+    background-color: var(--third-color);
+    color: var(--accent-color-2);
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.headline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 20px 0;
+    color: var(--accent-color-2);
+    line-height: 1.5;
+}
+.choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+.choice-btn {
+    background-color: var(--accent-color-1);
+    color: var(--primary-color);
+    border: 2px solid var(--third-color);
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.choice-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color-2);
+}
+
+#feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.feedback-success {
+    background-color: #e8f5e9;
+    color: var(--accent-color-2);
+    border: 1px solid var(--third-color);
+}
+.feedback-error {
+    background-color: #ffebee;
+    color: #830000;
+    border: 1px solid #000000;
+}
+.hidden {
+    display: none;
+}
+
+/************** News Section **************/
+.news-section {
+    margin-top: 40px;
+}
+.section-title {
+    color: var(--accent-color-1);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.news-card {
+    background-color: var(--accent-color-1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news-card h3 {
+    margin-top: 0;
+    color: var(--accent-color-2);
+    font-size: 1.2rem;
+}
+.news-snippet {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.read-more-btn {
+    align-self: flex-start;
+    color: var(--accent-color-1);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+.read-more-btn:hover {
+    color: var(--secondary-color);
+}
+
+/************** Footer  **************/
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color-1);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--accent-color-1);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+footer a img {
+    border: 1px solid #9b9b9b;
+    box-shadow: 0 6px 12px rgba(200, 200, 200, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+.round {
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+.square {
+    border-radius: 30%;
+    padding: 2px;
+}
+footer a img:hover {
+    color: var(--accent-color-2);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(200, 200, 200, 0.6);
+}
+footer .container {
+    margin-top: auto;
+}
+.info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
