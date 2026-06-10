@@ -205,3 +205,21 @@ footer .container {
     margin: 5px 0;
     font-size: 0.9rem;
 }
+
+/*********** Language Selector ***********/
+#language-selector {
+    background-color: var(--primary-color);
+    color: var(--accent-color-1);
+    border: 1px solid var(--secondary-color);
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-size: 1rem;
+    font-family: var(--font-base);
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+}
+#language-selector {
+    background-color: var(--primary-color);
+    color: var(--accent-color-1);
+}

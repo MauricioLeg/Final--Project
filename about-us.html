@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mauricio Leguizamon">
+    <meta name="description" content="A website to grow your wisdom! Learn how to discern between good and bad content from any type of content. From Instagram post to CNN news!">
+    <title>Debunked - Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.mjs" type="module"></script>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <section class="siteLinks">
+                <a href="https://mauricioleg.github.io/Final--Project/" data-i18n="nav_homepage">Homepage</a>
+                <a href="https://mauricioleg.github.io/Final--Project/about-us.html" data-i18n="nav_about">About Us</a>
+                <a href="https://mauricioleg.github.io/Final--Project/contact.html" data-i18n="nav_contact">Contact Us</a>
+            </section>
+            <section class="log-lang">
+                <select id="language-selector">
+                    🌐
+                    <option value="en">English</option>
+                    <option value="es-419">Español (Latam)</option>
+                    <option value="es-Es">Español (España)</option>
+                    <option value="pt-BR">Português</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                </select>
+                <a href="#" data-i18n="nav_login">Log In</a>
+                <a href="#" data-i18n="nav_register">Register</a>
+            </section>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <section class="about-intro">
+            <h1>About us</h1>
+            <p>Debunked was created as a capstone project for the WDD330: Web Frontend Development II course at BYU-Idaho. 
+                Developed by Mauricio Leguizamon, a Software and Web Development student, this platform combines a passion 
+                for modern frontend engineering with a vital mission: empowering individuals to navigate the digital age. 
+                By translating complex logical fallacies and data manipulation tactics into interactive, multilingual 
+                challenges, Debunked serves as a practical tool to sharpen media literacy and foster critical thinking worldwide</p>
+            <img src="images/Brigham_Young_University–Idaho_medallion.svg.png" alt="BYU-Idaho logo">
+        </section>
+        <section class="about-mission">
+            <h2>Our Mission</h2>
+            <p>In an era of rapid information sharing, the ability to analyze media critically is more important than ever.
+                 <strong>Debunked</strong> was designed to turn media literacy into an engaging, daily practice. Our goal is to equip users 
+                 with the mental tools needed to spot logical fallacies, recognize emotional bias, outsmart data 
+                 manipulation, and filter out sensationalism. We believe that a wiser world starts with questioning the headlines.</p>
+        </section>
+        <section class="about-tech">
+            <h2>Key Features & Tech Stack</h2>
+            <ul class="tech-list">
+                <li><strong>Component-Based Architecture:</strong> Engineered entirely with native JavaScript ES Modules (.mjs) to keep the codebase modular, scalable , and easy to maintain.</li>
+                <li><strong>Dynamic UI Templating:</strong> Utilizing custom-built JavaScript templates to inject game puzzles and educational feeds dynamically into the DOM based on real-time data.</li>
+                <li><strong>Multilingual Support (Localization):</strong> Features a robust client-side localization engine that fetches asynchronously hosted JSON translation files, instantly swapping the entire UI-including dynamic game assets-between languages seamlessly.</li>
+                <li><strong>State Persistence:</strong> Leverages the Web Storage API (localStorage) ti track user game states, calculate daily completion parameters, and persist historical user streaks across browser sessions.</li>
+                <li><strong>Responsive Frontend Design:</strong> Styled with advanced, fluid CSS layouts optimized for a seamless interactive experience across mobile devices, tablets, and desktop monitors.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="https://github.com/MauricioLeg" target="_blank"><img src="images/github.svg" alt="Link to personal GitHub page" class="round"></a>
+            <a href="https://www.linkedin.com/in/mauricio-leguizamon-2504292a5/" target="_blank"><img src="images/linkedin.svg" alt="Link to personal LinkedIn page" class="square"></a>
+            <a href="https://www.facebook.com/mauricio.leguizamon.731" target="_blank"><img src="images/facebook.svg" alt="Link to personal Facebook page" class="round"></a>
+            <a href="https://www.instagram.com/leguizamon2337/" target="_blank"><img src="images/instagram.svg" alt="Link to personal Instagram page" class="square"></a>
+        </div>
+        <div class="info">
+            <p>© <span id="currentyear"></span> ※ Mauricio Leguizamon ※ Tucuman, Argentina</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

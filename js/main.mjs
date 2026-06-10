@@ -3,29 +3,7 @@ import { generatePuzzle } from "./PuzzleGenerator.mjs";
 import { createPuzzleTemplate, createNewsFeedTemplate } from "./templates.mjs";
 import { verifyAnswer } from "./CompareText.mjs";
 import { getUserStats, saveGameResult, hasPlayedToday } from "./Storage.mjs";
-
-let currentTranslations = {};
-
-async function loadTranslation(locale) {
-    try {
-        const response = await fetch(`/locales/${locale}.json`);
-        if (!response) throw new Error('Locale layout file not found');
-        currentTranslations = await response.json();
-    } catch {
-        console.error(`Could not load translations for ${locale}, falling back to English:`, error);
-        const response = await fetch('/locales/en.json');
-        currentTranslations = await response.json();
-    }
-}
-
-function applyTranslations() {
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        if (currentTranslations[key]) {
-            element.textContent = currentTranslations[key];
-        }
-    })
-}
+import { loadTranslations, applyTranslations, getAllTranslations, getTranslation } from "./languages.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const year = document.querySelector("#currentyear")
@@ -35,29 +13,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     const gamesContainer = document.querySelector('.games');
     const newsContainer = document.querySelector('.news');
+    const langSelector = document.getElementById('language-selector');
+
+    let preferredLocale = localStorage.getItem('debunked_locale') || 'en';
+    langSelector.value = preferredLocale;
+
+    await loadTranslations(preferredLocale);
+    applyTranslations()
     
     try {
         const rawData = await fetchDailyHeadline();
         const activePuzzle = generatePuzzle(rawData);
-
-        gamesContainer.innerHTML = createPuzzleTemplate(activePuzzle)
         const articles = await fetchEducationalNews();
-        newsContainer.innerHTML = createNewsFeedTemplate(articles);
-        const feedbackDiv = document.getElementById('feedback');
-
-        if (hasPlayedToday()) {
-            disableGameButtons();
-            const stats = getUserStats();
-            feedbackDiv.classList.remove('hidden');
-            feedbackDiv.classList.add('feedback-success');
-            feedbackDiv.innerHTML = `
-            <p><strong>You already completed today's challenge!</strong> Comeback tomorrow for a new headline.</p>
-            <hr style="border-color: rgba(0, 0, 0, 0.1)">
-            <p>📊 Your stats - Played: ${stats.gamesPlayed} | Won: ${stats.gamesWon} | Current streak: ${stats.currentStreak}🔥</p>
-            `;
-
-            return;
+        
+        function renderPageContent() {
+            const translations = getAllTranslations();
+            gamesContainer.innerHTML = createPuzzleTemplate(activePuzzle, translations)
+            newsContainer.innerHTML = createNewsFeedTemplate(articles, translations);
+            
+            const feedbackDiv = document.getElementById('feedback');
+            if (hasPlayedToday()) {
+                disableGameButtons();
+                renderStatsDisplay(feedbackDiv);
+            }
         }
+
+        renderPageContent();
+
+        langSelector.addEventListener('change', async (e) => {
+            preferredLocale = e.target.value;
+            localStorage.setItem('debunked_locale', preferredLocale);
+
+            await loadTranslations(preferredLocale);
+            applyTranslations();
+
+            renderPageContent();
+        })
 
         gamesContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('choice-btn')) {
@@ -67,15 +58,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const updatedStats = saveGameResult(isCorrect);
                 disableGameButtons();
                 
+                const feedbackDiv = document.getElementById('feedback');
+                if (!feedbackDiv) return;
+
                 feedbackDiv.classList.remove('hidden');
                 feedbackDiv.className = '';
 
                 if (isCorrect) {
                     feedbackDiv.classList.add('feedback-success');
-                    feedbackDiv.innerHTML = `<p style="color: green;">🎉 Correct! ${activePuzzle.explanation}</p>`;
+                    feedbackDiv.innerHTML = `<p style="color: green;">${getTranslation('feedback_correct')}</p>
+                                            <p>${activePuzzle.explanation}</p>`;
                 } else {
                     feedbackDiv.classList.add('feedback-error');
-                    feedbackDiv.innerHTML = `<p style="color: red;">❌ Incorrect. Try again to spot the trick!</p>`;
+                    feedbackDiv.innerHTML = `
+                        <p style="color: red;">${getTranslation('feedback_incorrect')}</p>
+                        <p>${activePuzzle.explanation}</p>
+                    `;
                 }
             }
         });
@@ -92,4 +90,21 @@ function disableGameButtons() {
         btn.style.opacity = '0.6';
         btn.style.cursor = 'not-allowed';
     });
+}
+
+function renderStatsDisplay(container) {
+    const stats = getUserStats();
+    container.classList.remove('hidden');
+    container.classList.add('feedback-success');
+
+    let statsString = getTranslation('game_stats');
+    statsString = statsString.replace("{played}", stats.gamesPlayed)
+                            .replace("{won}", stats.gamesWon)
+                            .replace("{streak}", stats.currentStreak);
+
+    container.innerHTML = `
+        <p><strong>${getTranslation('game_already_played')}</strong></p>
+        <hr style="border-color: rgba(0, 0, 0, 0.1)">
+        <p>📊 Your stats - Played: ${stats.gamesPlayed} | Won: ${stats.gamesWon} | Current streak: ${stats.currentStreak}🔥</p>
+    `;
 }

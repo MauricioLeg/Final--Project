@@ -1,9 +1,10 @@
-export function createPuzzleTemplate(puzzle) {
+export function createPuzzleTemplate(puzzle, translations = {}) {
     const choicesList = puzzle.choices || ['Logical Fallacy', 'Bias', 'Data Manipulation', 'Sensationalism']
-    
+    const titleText = translations.game_title || 'Daily Challenge';
+
     return `
     <div class="puzzle-card">
-        <h2>Daily Challenge</h2>
+        <h2>${titleText}</h2>
         <p class="headline">"${puzzle.headline}"</p>
         <div class="choices">
             ${choicesList.map(choice => `<button class="choice-btn" data-answer="${choice}">${choice}</button>`).join('')}
@@ -12,11 +13,21 @@ export function createPuzzleTemplate(puzzle) {
     </div>`;
 }
 
-export function createNewsFeedTemplate(articles) {
+export function createNewsFeedTemplate(articles, translations = {}) {
+    const sectionTitle = translations.news_title || 'Grow Your Wisdom: Media Literacy Feed';
+
     return `
         <div class="news-section">
-            <h2>Grow Your Wisdom: Media Literacy Feed</h2>
-            <div class="news-grid"></div>
+            <h2 class="section-title">${sectionTitle}</h2>
+            <div class="news-grid">
+                ${articles.map(article => `
+                    <div>
+                        <h3>${article.title}</h3>
+                        <p class="news-snippet">${article.snippet}</p>
+                        <a href="${article.link}" target="_blank" class="read-more-btn">Read Deep Dive →</a>
+                    </div>
+                    `).join('')}
+            </div>
         </div>
     `;
 }
