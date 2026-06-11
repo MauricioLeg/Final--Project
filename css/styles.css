@@ -223,3 +223,261 @@ footer .container {
     background-color: var(--primary-color);
     color: var(--accent-color-1);
 }
+
+/***************** Contact us Modal *****************/
+#contact-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--primary-color, #4a154b);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-btn:hover {
+    transform: scale(1.1);
+    background-color: #360f37;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 460px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+.modal-card h2 {
+    color: #4a154b;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+.form-group label {
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #222222;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222222' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    padding-right: 2.5rem;
+}
+.form-group textarea {
+    resize: none;
+}
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #4a154b;
+    box-shadow: 0 0 0 4px rgba(74, 21, 75, 0.15);
+}
+.submit-btn {
+    width: 100%;
+    background-color: #4a154b;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 12px rgba(74, 21, 75, 0.3);
+    transition: background-color 0.2s, transform 0.1s;
+}
+.submit-btn:hover {
+    background-color: #360f37;
+}
+.submit-btn:active {
+    transform: scale(0.98);
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #555555;
+    line-height: 1;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: #000000;
+}
+#form-feedback {
+    margin-top: 1.2rem;
+    padding: 0.75rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+#form-feedback.success {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+#form-feedback.error {
+    background-color: #fce8e6;
+    color: #c5221f;
+}
+.hidden {
+    display: none;
+}
+
+/************** About us page **************/
+.about-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Clear Glassmorphism / Minimal Card Wrap */
+.about-card {
+    background-color: #ffffff;
+    color: #222222;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings Typography */
+.about-card h1 {
+    color: #4a154b;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.about-card h2 {
+    color: #4a154b;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Base Paragraph Typography */
+.about-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 1.2rem;
+}
+
+.about-card strong {
+    color: #111111;
+}
+
+/* --- THE TEXT SURROUNDING MIXIN FIX --- */
+
+/* Parent Container ensuring floats behave nicely */
+.about-intro {
+    display: block; /* Turns off any Flexbox/Grid behavior */
+    width: 100%;
+}
+
+/* Float the logo layout box to the right side */
+.about-logo-wrapper {
+    float: right;
+    margin-left: 2rem;      /* Creates a breathing buffer on the left of the image */
+    margin-bottom: 1rem;    /* Creates a breathing buffer below the image */
+    max-width: 180px;       /* Constrains size nicely */
+    width: 100%;
+}
+
+/* Logo Image Attributes */
+.about-logo-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Essential Reset: Prevents elements below from accidentally sliding up into the float */
+.about-divider {
+    clear: both; 
+    border: none;
+    border-top: 2px solid #eeeeee;
+    margin: 2.5rem 0;
+}
+
+/* --- Tech Stack Features Formatting --- */
+.tech-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tech-list li {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding-left: 1.8rem;
+    position: relative;
+    color: #444444;
+}
+
+.tech-list li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1rem;
+}

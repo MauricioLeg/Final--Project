@@ -34,32 +34,36 @@
     </header>
 
     <main class="about-container">
-        <section class="about-intro">
-            <h1>About us</h1>
-            <p>Debunked was created as a capstone project for the WDD330: Web Frontend Development II course at BYU-Idaho. 
-                Developed by Mauricio Leguizamon, a Software and Web Development student, this platform combines a passion 
-                for modern frontend engineering with a vital mission: empowering individuals to navigate the digital age. 
-                By translating complex logical fallacies and data manipulation tactics into interactive, multilingual 
-                challenges, Debunked serves as a practical tool to sharpen media literacy and foster critical thinking worldwide</p>
-            <img src="images/Brigham_Young_University–Idaho_medallion.svg.png" alt="BYU-Idaho logo">
-        </section>
-        <section class="about-mission">
-            <h2>Our Mission</h2>
-            <p>In an era of rapid information sharing, the ability to analyze media critically is more important than ever.
-                 <strong>Debunked</strong> was designed to turn media literacy into an engaging, daily practice. Our goal is to equip users 
-                 with the mental tools needed to spot logical fallacies, recognize emotional bias, outsmart data 
-                 manipulation, and filter out sensationalism. We believe that a wiser world starts with questioning the headlines.</p>
-        </section>
-        <section class="about-tech">
-            <h2>Key Features & Tech Stack</h2>
-            <ul class="tech-list">
-                <li><strong>Component-Based Architecture:</strong> Engineered entirely with native JavaScript ES Modules (.mjs) to keep the codebase modular, scalable , and easy to maintain.</li>
-                <li><strong>Dynamic UI Templating:</strong> Utilizing custom-built JavaScript templates to inject game puzzles and educational feeds dynamically into the DOM based on real-time data.</li>
-                <li><strong>Multilingual Support (Localization):</strong> Features a robust client-side localization engine that fetches asynchronously hosted JSON translation files, instantly swapping the entire UI-including dynamic game assets-between languages seamlessly.</li>
-                <li><strong>State Persistence:</strong> Leverages the Web Storage API (localStorage) ti track user game states, calculate daily completion parameters, and persist historical user streaks across browser sessions.</li>
-                <li><strong>Responsive Frontend Design:</strong> Styled with advanced, fluid CSS layouts optimized for a seamless interactive experience across mobile devices, tablets, and desktop monitors.</li>
-            </ul>
-        </section>
+        <div class="about-card">
+            <h1 data-i18n="about-title">About us</h1>
+            <section class="about-intro">
+                <div class="about-logo-wrapper">
+                    <img src="images/Brigham_Young_University–Idaho_medallion.svg.png" alt="BYU-Idaho logo" width="200" height="200">
+                </div>
+                <p>Debunked was created as a capstone project for the WDD330: Web Frontend Development II course at BYU-Idaho. 
+                    Developed by Mauricio Leguizamon, a Software and Web Development student, this platform combines a passion 
+                    for modern frontend engineering with a vital mission: empowering individuals to navigate the digital age. 
+                    By translating complex logical fallacies and data manipulation tactics into interactive, multilingual 
+                    challenges, Debunked serves as a practical tool to sharpen media literacy and foster critical thinking worldwide</p>
+            </section>
+            <section class="about-mission">
+                <h2 data-i18n="about-mission-title">Our Mission</h2>
+                <p>In an era of rapid information sharing, the ability to analyze media critically is more important than ever.
+                    <strong>Debunked</strong> was designed to turn media literacy into an engaging, daily practice. Our goal is to equip users 
+                    with the mental tools needed to spot logical fallacies, recognize emotional bias, outsmart data 
+                    manipulation, and filter out sensationalism. We believe that a wiser world starts with questioning the headlines.</p>
+            </section>
+            <section class="about-tech">
+                <h2 data-i18n="about-tech-title">Key Features & Tech Stack</h2>
+                <ul class="tech-list">
+                    <li><strong>Component-Based Architecture:</strong> Engineered entirely with native JavaScript ES Modules (.mjs) to keep the codebase modular, scalable , and easy to maintain.</li>
+                    <li><strong>Dynamic UI Templating:</strong> Utilizing custom-built JavaScript templates to inject game puzzles and educational feeds dynamically into the DOM based on real-time data.</li>
+                    <li><strong>Multilingual Support (Localization):</strong> Features a robust client-side localization engine that fetches asynchronously hosted JSON translation files, instantly swapping the entire UI-including dynamic game assets-between languages seamlessly.</li>
+                    <li><strong>State Persistence:</strong> Leverages the Web Storage API (localStorage) ti track user game states, calculate daily completion parameters, and persist historical user streaks across browser sessions.</li>
+                    <li><strong>Responsive Frontend Design:</strong> Styled with advanced, fluid CSS layouts optimized for a seamless interactive experience across mobile devices, tablets, and desktop monitors.</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -74,5 +78,33 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+    <button id="contact-btn" title="Contact Us">💬</button>
+
+    <div id="contact-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button id="close-btn" class="close-btn">&times;</button>
+            <h2 data-i18n="contact-title">Get in Touch</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="email" data-i18n="contact-label-email">Email</label>
+                    <input type="email" id="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message-type" data-i18n="contact-label-purpose">Purpose</label>
+                    <select id="message-type">
+                        <option value="feedback" data-i18n="contact-feedback">General Feedback</option>
+                        <option value="bug" data-i18n="contact-bug">Report a Bug</option>
+                        <option value="suggestion" data-i18n="contact-suggestion">Suggest a Headline</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="contact-message">Message</label>
+                    <textarea id="message" rows="4" required placeholder="Write your message here"></textarea>
+                </div>
+                    <button type="submit" class="submit-btn" data-i18n="contact-btn-submit">Send Message</button>
+            </form>
+            <div id="form-feedback" class="hidden"></div>
+        </div>
+    </div>
 </body>
 </html>

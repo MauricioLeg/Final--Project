@@ -4,6 +4,7 @@ import { createPuzzleTemplate, createNewsFeedTemplate } from "./templates.mjs";
 import { verifyAnswer } from "./CompareText.mjs";
 import { getUserStats, saveGameResult, hasPlayedToday } from "./Storage.mjs";
 import { loadTranslations, applyTranslations, getAllTranslations, getTranslation } from "./languages.mjs";
+import { displayContactModal } from "./contact-us.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const year = document.querySelector("#currentyear")
@@ -14,6 +15,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const gamesContainer = document.querySelector('.games');
     const newsContainer = document.querySelector('.news');
     const langSelector = document.getElementById('language-selector');
+
+    if (!gamesContainer || !newsContainer) {
+        console.log("Not on the homepage. Skipping game initialization.");
+        return; 
+    }
 
     let preferredLocale = localStorage.getItem('debunked_locale') || 'en';
     langSelector.value = preferredLocale;
@@ -49,6 +55,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             renderPageContent();
         })
+
+        displayContactModal();
 
         gamesContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('choice-btn')) {
