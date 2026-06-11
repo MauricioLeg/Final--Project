@@ -28,8 +28,8 @@
                     <option value="ja">日本語</option>
                     <option value="ko">한국어</option>
                 </select>
-                <a href="#" data-i18n="nav_login">Log In</a>
-                <a href="#" data-i18n="nav_register">Register</a>
+                <a href="#" id="nav-login" data-i18n="nav_login">Log In</a>
+                <a href="#" id="nav-register" data-i18n="nav_register">Register</a>
             </section>
         </nav>
     </header>
@@ -83,6 +83,37 @@
                     <button type="submit" class="submit-btn" data-i18n="contact-btn-submit">Send Message</button>
             </form>
             <div id="form-feedback" class="hidden"></div>
+        </div>
+    </div>
+    <div id="auth-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button id="auth-close-btn" class="close-btn">&times;</button>
+            <h2 id="auth-title">Register</h2>
+
+            <form id="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="auth-username">Username</label>
+                    <input type="text" id="auth-username" required placeholder="Choose a username">
+                </div>
+                
+                <div class="form-group" id="auth-age-group">
+                    <label for="auth-age">Age</label>
+                    <input type="number" id="auth-age" required placeholder="Your age" min="13">
+                </div>
+
+                <div class="form-group">
+                    <label for="auth-password">Password</label>
+                    <input type="password" id="auth-password" required placeholder="Enter password">
+                </div>
+
+                <button type="submit" class="submit-btn" id="auth-submit-btn">Create Account</button>
+            </form>
+            
+            <p class="auth-toggle-container">
+                <a href="#" id="auth-toggle-link">Already have an account? Log in here</a>
+            </p>
+
+            <div id="auth-feedback" class="auth-feedback hidden"></div>
         </div>
     </div>
 </body>

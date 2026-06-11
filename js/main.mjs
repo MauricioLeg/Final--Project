@@ -5,6 +5,7 @@ import { verifyAnswer } from "./CompareText.mjs";
 import { getUserStats, saveGameResult, hasPlayedToday } from "./Storage.mjs";
 import { loadTranslations, applyTranslations, getAllTranslations, getTranslation } from "./languages.mjs";
 import { displayContactModal } from "./contact-us.mjs";
+import { setupAuth } from "./login.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const year = document.querySelector("#currentyear")
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         })
 
         displayContactModal();
+        setupAuth();
 
         gamesContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('choice-btn')) {
