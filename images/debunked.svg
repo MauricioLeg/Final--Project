@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#571560" />
+      <stop offset="60%" stop-color="#420f49" />
+      <stop offset="100%" stop-color="#2c0a31" />
+    </radialGradient>
+
+    <linearGradient id="letter-face" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#571560" />
+      <stop offset="100%" stop-color="#8d5c93" />
+    </linearGradient>
+
+    <linearGradient id="bevel-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a8a8a8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#8d5c93" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="bevel-right" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#a8a8a8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#571560" stop-opacity="0.8" />
+    </linearGradient>
+
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    
+    <filter id="inner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncA type="linear" slope="0.7"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feOffset dx="0" dy="4"/>
+      <feComposite operator="out" in2="SourceGraphic" result="inverse"/>
+      <feFlood flood-color="black" result="color"/>
+      <feComposite operator="in" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect x="16" y="16" width="480" height="480" rx="108" ry="108" fill="url(#bg-grad)" />
+
+  <rect x="36" y="36" width="440" height="440" rx="88" ry="88" fill="none" stroke="#a8a8a8" stroke-width="3" stroke-opacity="0.4" />
+  <rect x="44" y="44" width="424" height="424" rx="80" ry="80" fill="none" stroke="#8d5c93" stroke-width="2" stroke-opacity="0.6" />
+
+  <g filter="url(#drop-shadow)">
+    <path d="M 160,120 L 290,120 C 370,120 415,165 415,256 C 415,347 370,392 290,392 L 160,392 Z M 238,188 L 238,324 L 282,324 C 324,324 338,305 338,256 C 338,207 324,188 282,188 Z" fill="#3a0d40" />
+    
+    <path d="M 160,120 L 290,120 C 370,120 415,165 415,256 L 385,256 C 385,185 350,150 282,150 L 190,150 L 190,362 L 160,392 Z" fill="url(#bevel-top)" />
+
+    <path d="M 290,120 C 370,120 415,165 415,256 C 415,347 370,392 290,392 L 270,370 C 340,370 385,330 385,256 C 385,182 340,142 270,142 Z" fill="url(#bevel-right)" />
+
+    <path d="M 170,130 L 285,130 C 358,130 400,172 400,256 C 400,340 358,382 285,382 L 170,382 Z M 238,192 L 238,320 L 278,320 C 316,320 332,302 332,256 C 332,210 316,192 278,192 Z" fill="url(#letter-face)" />
+    
+    <path d="M 170,130 L 285,130 C 358,130 400,172 400,256 C 400,340 358,382 285,382 L 170,382 Z M 238,192 L 238,320 L 278,320 C 316,320 332,302 332,256 C 332,210 316,192 278,192 Z" fill="none" stroke="#a8a8a8" stroke-width="1.5" stroke-opacity="0.25" />
+  </g>
+</svg>

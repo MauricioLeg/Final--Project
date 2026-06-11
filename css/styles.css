@@ -46,6 +46,10 @@ body {
     border: none;
     font-size: large;
 }
+.siteLinks {
+    display: flex;
+    justify-content: center;
+}
 
 /*********************** Main content ***********************/
 main {
