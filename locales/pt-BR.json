@@ -9,5 +9,14 @@
     "game_stats": "Suas estatísticas — Jogadas: {played} | Vitórias: {won} | Sequência atual: {streak} 🔥",
     "feedback_correct": "🎉 Correto!",
     "feedback_incorrect": "❌ Incorreto. Tente novamente para descobrir o truque!",
-    "news_title": "💡 Aumente sua Sabedoria: Feed de Alfabetização Midiática"
+    "news_title": "💡 Aumente sua Sabedoria: Feed de Alfabetização Midiática",
+    "news_read_more": "Leia mais",
+    "footer_rights": "© 2026 Debunked. Todos os direitos reservados.",
+    "contact_title": "Entre em contato",
+    "contact_name_label": "Nome",
+    "contact_email_label": "Email",
+    "contact_message_label": "Mensagem",
+    "contact_submit": "Enviar Mensagem",
+    "auth_login_btn": "Entrar",
+    "auth_register_btn": "Criar Conta"
 }

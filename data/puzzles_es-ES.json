@@ -1,0 +1,21 @@
+{
+    "dailyHeadline": {
+        "headline": "Última hora: Un estudio local muestra que el 100% de las personas que beben agua acaban sufriendo problemas de salud fatales.",
+        "source": "Diario de Correlación",
+        "category": "Falacia Lógica",
+        "explanation": "Esto es un argumento engañoso de correlación frente a causalidad. Si bien es cierto que todos los humanos mueren, el consumo de agua no es la causa estructural de la mortalidad.",
+        "correctAnswer": "Falacia Lógica"
+    },
+    "educationalNews": [
+        {
+            "title": "Cómo detectar la trampa del sesgo de confirmación",
+            "snippet": "Naturalmente queremos creer aquellas historias que nos dan la razón. Aprende las 3 preguntas que debes hacerte cada vez que un titular te enfade o te alegre al instante.",
+            "link": "#"
+        },
+        {
+            "title": "Manipulación de datos: La zona de peligro de los gráficos",
+            "snippet": "Los trucos de escala del eje Y pueden hacer que pequeñas variaciones parezcan crisis mundiales. Mirad estos ejemplos reales de gráficos corporativos engañosos.",
+            "link": "#"
+        }
+    ]
+}

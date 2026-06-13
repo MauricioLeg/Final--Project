@@ -9,5 +9,14 @@
     "game_stats": "Your stats — Played: {played} | Won: {won} | Current streak: {streak} 🔥",
     "feedback_correct": "🎉 Correct!",
     "feedback_incorrect": "❌ Incorrect. Try again to spot the trick!",
-    "news_title": "💡 Grow Your Wisdom: Media Literacy Feed"
+    "news_title": "💡 Grow Your Wisdom: Media Literacy Feed",
+    "news_read_more": "Read More",
+    "footer_rights": "© 2026 Debunked. All rights reserved.",
+    "contact_title": "Get in Touch",
+    "contact_name_label": "Name",
+    "contact_email_label": "Email",
+    "contact_message_label": "Message",
+    "contact_submit": "Send Message",
+    "auth_login_btn": "Sign In",
+    "auth_register_btn": "Create Account"
 }

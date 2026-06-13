@@ -1,0 +1,21 @@
+{
+    "dailyHeadline": {
+        "headline": "Breaking: Local study shows 100% of people who drink water eventually suffer fatal health outcomes.",
+        "source": "Correlation Daily",
+        "category": "Logical Fallacy",
+        "explanation": "This plays on a flawed correlation vs causation argument. While true that all humans die, water consumption is not the structural cause of mortality.",
+        "correctAnswer": "Logical Fallacy"
+    },
+    "educationalNews": [
+        {
+            "title": "How to Spot a Confirmation Bias Trap",
+            "snippet": "We naturally want to believe stories that prove us right. Learn the 3 questions to ask yourself whenever a headline makes you instantly angry or happy.",
+            "link": "#"
+        },
+        {
+            "title": "Data Manipulation: The Graph Danger Zone",
+            "snippet": "Y-axis scaling tricks can make tiny variations look like world-ending crises. See real-world examples of misleading corporate charts analyzed.",
+            "link": "#"
+        }
+    ]
+}

@@ -9,5 +9,14 @@
     "game_stats": "あなたの統計 — プレイ数: {played} | 勝利数: {won} | 現在の連勝: {streak} 🔥",
     "feedback_correct": "🎉 正解！",
     "feedback_incorrect": "❌ 不正解。もう一度挑戦してコツを見つけよう！",
-    "news_title": "💡 知識を高めよう: メディアリテラシーフィード"
+    "news_title": "💡 知識を高めよう: メディアリテラシーフィード",
+    "news_read_more": "もっと読む",
+    "footer_rights": "© 2026 Debunked. All rights reserved.",
+    "contact_title": "お問い合わせ",
+    "contact_name_label": "名前",
+    "contact_email_label": "メールアドレス",
+    "contact_message_label": "メッセージ",
+    "contact_submit": "送信",
+    "auth_login_btn": "ログイン",
+    "auth_register_btn": "アカウント作成"
 }

@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyTranslations()
     
     try {
-        const rawData = await fetchDailyHeadline();
-        const activePuzzle = generatePuzzle(rawData);
-        const articles = await fetchEducationalNews();
+        let rawData = await fetchDailyHeadline();
+        let activePuzzle = generatePuzzle(rawData);
+        let articles = await fetchEducationalNews();
         
         function renderPageContent() {
             const translations = getAllTranslations();
@@ -53,6 +53,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             await loadTranslations(preferredLocale);
             applyTranslations();
+
+            rawData = await fetchDailyHeadline(preferredLocale);
+            activePuzzle = generatePuzzle(rawData);
+            articles = await fetchEducationalNews(preferredLocale);
 
             renderPageContent();
         })
@@ -115,6 +119,6 @@ function renderStatsDisplay(container) {
     container.innerHTML = `
         <p><strong>${getTranslation('game_already_played')}</strong></p>
         <hr style="border-color: rgba(0, 0, 0, 0.1)">
-        <p>📊 Your stats - Played: ${stats.gamesPlayed} | Won: ${stats.gamesWon} | Current streak: ${stats.currentStreak}🔥</p>
+        <p>📊${statsString}🔥</p>
     `;
 }

@@ -14,6 +14,8 @@ export function setupAuth() {
 
     let isLoginMode = false;
 
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
     function openModal(mode) {
         authModal.classList.remove('hidden');
         feedbackDiv.classList.add('hidden');
@@ -105,6 +107,11 @@ export function setupAuth() {
                 return;
             }
 
+            if (!passwordRegex.test(password)) {
+                showFeedback('Password must be at least 8 characters long and include one uppercase, one lowercase, and a number.', 'error');
+                return;
+            }
+
             const newProfile = {
                 username: username,
                 age: age,
@@ -121,14 +128,12 @@ export function setupAuth() {
 
     function showFeedback(message, type) {
         feedbackDiv.textContent = message;
+        feedbackDiv.classList.remove('success', 'error', 'hidden');
+
         if (type === 'success') {
-            feedbackDiv.style.backgroundColor = '#e6f4ea';
-            feedbackDiv.style.color = '#137333';
-            feedbackDiv.style.border = '1px solid #137333';
+            feedbackDiv.classList.add('success')
         } else {
-            feedbackDiv.style.backgroundColor = '#fce8e6';
-            feedbackDiv.style.color = '#c5221f';
-            feedbackDiv.style.border = '1px solid #c5221f';
+            feedbackDiv.classList.add('error');
         }
     }
 }

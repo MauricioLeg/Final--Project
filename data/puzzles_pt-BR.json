@@ -1,0 +1,21 @@
+{
+    "dailyHeadline": {
+        "headline": "Última hora: Estudo local mostra que 100% das pessoas que bebem água eventualmente sofrem resultados fatais de saúde.",
+        "source": "Diário de Correlação",
+        "category": "Falácia Lógica",
+        "explanation": "Isto joga com um argumento falho de correlação versus causalidade. Embora seja verdade que todos os humanos morrem, o consumo de água não é a causa estrutural da mortalidade.",
+        "correctAnswer": "Falácia Lógica"
+    },
+    "educationalNews": [
+        {
+            "title": "Como identificar a armadilha do viés de confirmação",
+            "snippet": "Naturalmente queremos acreditar em histórias que nos dão razão. Aprenda as 3 perguntas a fazer a si mesmo sempre que uma manchete o deixar instantaneamente irritado ou feliz.",
+            "link": "#"
+        },
+        {
+            "title": "Manipulação de dados: A zona de perigo dos gráficos",
+            "snippet": "Truques na escala do eixo Y podem fazer com que pequenas variações pareçam crises mundiais. Veja exemplos reais de gráficos corporativos enganosos analisados.",
+            "link": "#"
+        }
+    ]
+}

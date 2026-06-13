@@ -9,5 +9,14 @@
     "game_stats": "내 통계 — 플레이 횟수: {played} | 우승: {won} | 현재 스트릭: {streak} 🔥",
     "feedback_correct": "🎉 정답입니다!",
     "feedback_incorrect": "❌ 오답입니다. 트릭을 다시 찾아보세요!",
-    "news_title": "💡 지혜 키우기: 미디어 리터러시 피드"
+    "news_title": "💡 지혜 키우기: 미디어 리터러시 피드",
+    "news_read_more": "더 보기",
+    "footer_rights": "© 2026 Debunked. All rights reserved.",
+    "contact_title": "문의하기",
+    "contact_name_label": "이름",
+    "contact_email_label": "이메일",
+    "contact_message_label": "메시지",
+    "contact_submit": "메시지 보내기",
+    "auth_login_btn": "로그인",
+    "auth_register_btn": "계정 만들기"
 }
