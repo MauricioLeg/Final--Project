@@ -19,5 +19,11 @@
     "contact_submit": "Send Message",
     "auth_login_btn": "Sign In",
     "auth_register_btn": "Create Account",
-    "loading_text": "Loading challenge..."
+    "loading_text": "Loading challenge...",
+    "contact_error_fields": "Please fill in all required fields.",
+    "contact_error_email": "Please provide a valid email address.",
+    "contact_success_msg": "Message sent successfully!",
+    "contact_sending": "Sending...",
+    "contact_error_server": "Oops! There was a problem submitting your form.",
+    "contact_error_network": "Network error. Please check your connection and try again."
 }

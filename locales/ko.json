@@ -19,5 +19,11 @@
     "contact_submit": "메시지 보내기",
     "auth_login_btn": "로그인",
     "auth_register_btn": "계정 만들기",
-    "loading_text": "불러오는 중..."
+    "loading_text": "불러오는 중...",
+    "contact_error_fields": "모든 필수 입력란을 채워주세요.",
+    "contact_error_email": "유효한 이메일 주소를 입력해주세요.",
+    "contact_success_msg": "메시지가 성공적으로 전송되었습니다!",
+    "contact_sending": "전송 중...",
+    "contact_error_server": "앗! 양식을 제출하는 중 문제가 발생했습니다.",
+    "contact_error_network": "네트워크 오류입니다. 연결을 확인하고 다시 시도해주세요."
 }

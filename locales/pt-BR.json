@@ -19,5 +19,11 @@
     "contact_submit": "Enviar Mensagem",
     "auth_login_btn": "Entrar",
     "auth_register_btn": "Criar Conta",
-    "loading_text": "Carregando desafio..."
+    "loading_text": "Carregando desafio...",
+    "contact_error_fields": "Por favor, preencha todos os campos obrigatórios.",
+    "contact_error_email": "Por favor, forneça um endereço de e-mail válido.",
+    "contact_success_msg": "Mensagem enviada com sucesso!",
+    "contact_sending": "Enviando...",
+    "contact_error_server": "Ops! Ocorreu um problema ao enviar seu formulário.",
+    "contact_error_network": "Erro de rede. Verifique sua conexão e tente novamente."
 }
