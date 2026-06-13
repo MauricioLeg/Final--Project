@@ -29,13 +29,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyTranslations()
     
     try {
+        let activePuzzle;
+        
         async function renderPageContent() {
             gamesContainer.innerHTML = `<p>${getTranslation('loading_text')}</p>`
             const translations = getAllTranslations();
             const liveArticles = await fetchLiveNews(preferredLocale);
 
             let rawData = await fetchDailyHeadline(preferredLocale);
-            let activePuzzle = generatePuzzle(rawData);
+            activePuzzle = generatePuzzle(rawData);
 
             gamesContainer.innerHTML = createPuzzleTemplate(activePuzzle, translations)
             newsContainer.innerHTML = createNewsFeedTemplate(liveArticles, translations);
