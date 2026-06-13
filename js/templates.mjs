@@ -15,6 +15,7 @@ export function createPuzzleTemplate(puzzle, translations = {}) {
 
 export function createNewsFeedTemplate(articles, translations = {}) {
     const sectionTitle = translations.news_title || 'Grow Your Wisdom: Media Literacy Feed';
+    const readMoreText = translations.news_read_mode || 'Read Deep Dive →';
 
     return `
         <div class="news-section">
@@ -24,7 +25,7 @@ export function createNewsFeedTemplate(articles, translations = {}) {
                     <div>
                         <h3>${article.title}</h3>
                         <p class="news-snippet">${article.snippet}</p>
-                        <a href="${article.link}" target="_blank" class="read-more-btn">Read Deep Dive →</a>
+                        <a href="${article.link}" target="_blank" class="read-more-btn">${readMoreText}</a>
                     </div>
                     `).join('')}
             </div>

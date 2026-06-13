@@ -1,4 +1,4 @@
-import { fetchDailyHeadline, fetchEducationalNews } from "./NewsData.mjs";
+import { fetchDailyHeadline, fetchLiveNews } from "./NewsData.mjs";
 import { generatePuzzle } from "./PuzzleGenerator.mjs";
 import { createPuzzleTemplate, createNewsFeedTemplate } from "./templates.mjs";
 import { verifyAnswer } from "./CompareText.mjs";
@@ -29,14 +29,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyTranslations()
     
     try {
-        let rawData = await fetchDailyHeadline();
-        let activePuzzle = generatePuzzle(rawData);
-        let articles = await fetchEducationalNews();
-        
-        function renderPageContent() {
+        async function renderPageContent() {
+            gamesContainer.innerHTML = `<p>${getTranslation('loading_text')}</p>`
             const translations = getAllTranslations();
+            const liveArticles = await fetchLiveNews(preferredLocale);
+
+            let rawData = await fetchDailyHeadline(preferredLocale);
+            let activePuzzle = generatePuzzle(rawData);
+
             gamesContainer.innerHTML = createPuzzleTemplate(activePuzzle, translations)
-            newsContainer.innerHTML = createNewsFeedTemplate(articles, translations);
+            newsContainer.innerHTML = createNewsFeedTemplate(liveArticles, translations);
             
             const feedbackDiv = document.getElementById('feedback');
             if (hasPlayedToday()) {
@@ -53,10 +55,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             await loadTranslations(preferredLocale);
             applyTranslations();
-
-            rawData = await fetchDailyHeadline(preferredLocale);
-            activePuzzle = generatePuzzle(rawData);
-            articles = await fetchEducationalNews(preferredLocale);
 
             renderPageContent();
         })

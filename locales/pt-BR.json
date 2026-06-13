@@ -18,5 +18,6 @@
     "contact_message_label": "Mensagem",
     "contact_submit": "Enviar Mensagem",
     "auth_login_btn": "Entrar",
-    "auth_register_btn": "Criar Conta"
+    "auth_register_btn": "Criar Conta",
+    "loading_text": "Carregando desafio..."
 }
