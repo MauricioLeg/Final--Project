@@ -1,21 +1,82 @@
-{
-    "dailyHeadline": {
-        "headline": "速報：地域調査によると、水を飲む人の100%が最終的に致命的な健康被害に遭うことが判明。",
-        "source": "相関関係デイリー",
-        "category": "論理的誤謬",
-        "explanation": "これは相関関係と因果関係の取り違えを利用した誤った議論です。人間が最終的に死亡するのは事実ですが、水の摂取が死亡の構造的な原因ではありません。",
-        "correctAnswer": "論理的誤謬"
-    },
-    "educationalNews": [
-        {
-            "title": "確証バイアスの罠を見抜く方法",
-            "snippet": "私たちは自分を肯定してくれる物語を信じたいという欲求があります。見出しを見てすぐに怒りや喜びを感じたときに、自分自身に問いかけるべき3つの質問を学びましょう。",
-            "link": "#"
-        },
-        {
-            "title": "データ操作：グラフの危険地帯",
-            "snippet": "Y軸の尺度を調整するトリックを使うと、些細な変化も世界的な危機のように見せかけることができます。誤解を招く企業グラフの分析事例をご覧ください。",
-            "link": "#"
-        }
-    ]
-}
+[
+  {
+    "id": 1,
+    "headline": "速報：地元の研究により、水を飲む人の100%が最終的に致命的な健康被害を受けることが判明。",
+    "source": "Correlation Daily",
+    "category": "Logical Fallacy",
+    "explanation": "これは相関関係と因果関係の誤った主張を利用しています。すべての人間が最終的に死亡するのは事実ですが、水の摂取が死亡の生物学的な原因ではありません。",
+    "correctAnswer": "Logical Fallacy"
+  },
+  {
+    "id": 2,
+    "headline": "流出した音声により、IT企業のCEOが来月までにすべてのリモートワーカーをホログラムに置き換える秘密計画を承認したことが発覚。",
+    "source": "The Daily Buzzfeed",
+    "category": "Deepfake / AI Altered",
+    "explanation": "この見出しは、検証されていない合成音声データを拡散しています。ホログラムを用いた労働環境テクノロジーは、世界規模で導入できるほど進歩しておらず、パニックや注目を集めるために捏造されたディープフェイクであることを示しています。",
+    "correctAnswer": "Deepfake / AI Altered"
+  },
+  {
+    "id": 3,
+    "headline": "最新のAIアルゴリズムが、プロフィールの写真だけで潜在的な犯罪者を99.9%の精度で自動識別することに成功。",
+    "source": "Silicon Horizon",
+    "category": "AI Bias & Misinformation",
+    "explanation": "これは、複雑な社会的課題を、身体的特徴に基づいた欠陥のあるソフトウェアで解決できると主張しています。過去のデータセットで訓練されたAIモデルは、人間の偏見をそのまま反映するため、静止写真に基づいて犯罪意図や行動を正確に予測することはできません。",
+    "correctAnswer": "AI Bias & Misinformation"
+  },
+  {
+    "id": 4,
+    "headline": "どこの家庭の台所にもある普通の野菜が、一晩であなたの動脈に何をもたらすか信じられないでしょう（医師たちは激怒しています！）。",
+    "source": "HealthHacks Global",
+    "category": "Clickbait",
+    "explanation": "これは、読者のクリックを誘導するために、検証可能な医学的データを示すことなく、扇情的で感情的な言葉（「信じられないでしょう」「医師たちは激怒しています」）と強い好奇心をあおる隙間（情報ギャップ）を利用しています。",
+    "correctAnswer": "Clickbait"
+  },
+  {
+    "id": 5,
+    "headline": "スイスで秘密のクリーンエネルギー装置が稼働したことにより、世界の炭素排出量が一夜にしてゼロに減少。",
+    "source": "EcoTruth Network",
+    "category": "Fake News",
+    "explanation": "魅力的なニュースですが、これは完全に捏造された記事です。単一の装置で世界の炭素排出量を瞬時に消し去ることは、物理法則や現在のエネルギーインフラの物流に真っ向から反しています。",
+    "correctAnswer": "Fake News"
+  },
+  {
+    "id": 6,
+    "headline": "動画：地元の住民集会中、市長が「この町がどうしても大嫌いだ」と発言する様子がカメラに捉えられる。",
+    "source": "City Watchdog Portal",
+    "category": "Out-of-Context Media",
+    "explanation": "この見出しは、極めて重要な文脈を切り捨てています。編集されていない元の映像を確認すると、市長は不満を持つ住民から届いた手紙の文面を引用して説明していただけであり、自身の個人的な感情を表明したものではありませんでした。",
+    "correctAnswer": "Out-of-Context Media"
+  },
+  {
+    "id": 7,
+    "headline": "草の根運動が全国に拡大：何千人もの一般市民が、大手IT企業の新しいプライバシーポリシーに対して、突然まったく同じ文面で称賛のツイートを投稿。",
+    "source": "TrendTracker News",
+    "category": "Astroturfing / Bot Network",
+    "explanation": "これは「アストロターフィング（サクラによる偽の草の根運動）」の典型的な例です。組織的な政治的・企業的キャンペーンを、市民の自発的な運動であるかのように偽装しています。何千ものアカウントで全く同じ表現が使われていることは、自動化されたボットネットワークの存在を示しています。",
+    "correctAnswer": "Astroturfing / Bot Network"
+  },
+  {
+    "id": 8,
+    "headline": "研究によると、グループチャットの85%は、実際にはメンバー全員が自分がミームを送信する順番をただ待っているだけであることが判明。",
+    "source": "The Onion Herald",
+    "category": "Satire / Parody",
+    "explanation": "この見出しは、娯楽を目的とした風刺メディア（パロディサイト）が発信源です。ユーモアがあり、誰もが共感できる社会的な観察ですが、科学的に行われた実際の実証研究ではありません。",
+    "correctAnswer": "Satire / Parody"
+  },
+  {
+    "id": 9,
+    "headline": "最新の科学的ブレイクスルーにより、子供の頃の「お気に入りの趣味」が、将来のエリート並みの知的能力を完璧に予測できることが証明される。",
+    "source": "Mindset Weekly",
+    "category": "Confirmation Bias Trap",
+    "explanation": "この見出しは、読者の自尊心と「確証バイアス」を意図的に狙っています。心地よい情報や非科学的な肯定感を提示することで、読者に元の研究手法を検証させることなく、記事をシェアするように誘導しています。",
+    "correctAnswer": "Confirmation Bias Trap"
+  },
+  {
+    "id": 10,
+    "headline": "グラフ：新経営陣の戦略のもと、企業の利益がわずか3ヶ月足らずで2倍に増加。",
+    "source": "Metric Dynamics",
+    "category": "Data / Graph Manipulation",
+    "explanation": "付属のチャートは、Y軸の目盛りを「0%」ではなく「95%」から開始するように視覚的なデザインを操作していました。この切り捨てのトリックにより、わずか2%程度の通常範囲の変動が、まるで爆発的な利益の急上昇であるかのように誤認させています。",
+    "correctAnswer": "Data / Graph Manipulation"
+  }
+]

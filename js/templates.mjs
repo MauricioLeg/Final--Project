@@ -1,5 +1,13 @@
 export function createPuzzleTemplate(puzzle, translations = {}) {
-    const choicesList = puzzle.choices || ['Logical Fallacy', 'Bias', 'Data Manipulation', 'Sensationalism']
+    const choicesList = [
+        'Logical Fallacy', 
+        'Deepfake / AI Altered', 
+        'AI Bias & Misinformation', 
+        'Clickbait', 
+        'Fake News', 
+        'Out-of-Context Media', 
+        'Satire / Parody'
+    ];
     const titleText = translations.game_title || 'Daily Challenge';
 
     return `

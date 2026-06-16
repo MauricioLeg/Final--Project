@@ -1,5 +1,4 @@
 import { fetchDailyHeadline, fetchLiveNews } from "./NewsData.mjs";
-import { generatePuzzle } from "./PuzzleGenerator.mjs";
 import { createPuzzleTemplate, createNewsFeedTemplate } from "./templates.mjs";
 import { verifyAnswer } from "./CompareText.mjs";
 import { getUserStats, saveGameResult, hasPlayedToday } from "./Storage.mjs";
@@ -37,7 +36,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const liveArticles = await fetchLiveNews(preferredLocale);
 
             let rawData = await fetchDailyHeadline(preferredLocale);
-            activePuzzle = generatePuzzle(rawData);
+            const randomPuzzle = Math.floor(Math.random() * rawData.length);
+            activePuzzle = rawData[randomPuzzle];
 
             gamesContainer.innerHTML = createPuzzleTemplate(activePuzzle, translations)
             newsContainer.innerHTML = createNewsFeedTemplate(liveArticles, translations);
@@ -89,6 +89,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p>${activePuzzle.explanation}</p>
                     `;
                 }
+
+                setTimeout(() => {
+                    feedbackDiv.style.opacity = '0';
+
+                    setTimeout(() => {
+                        renderStatsDisplay(feedbackDiv);
+                        feedbackDiv.style.opacity = '1';
+                    }, 400);
+                }, 4000);
             }
         });
     } catch (error) {

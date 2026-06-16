@@ -1,21 +1,82 @@
-{
-    "dailyHeadline": {
-        "headline": "Último momento: Un estudio local muestra que el 100% de las personas que toman agua eventualmente sufren problemas de salud fatales.",
-        "source": "Diario de Correlación",
-        "category": "Falacia Lógica",
-        "explanation": "Esto es un argumento engañoso de correlación vs. causalidad. Si bien es cierto que todos los humanos mueren, el consumo de agua no es la causa estructural de la mortalidad.",
-        "correctAnswer": "Falacia Lógica"
-    },
-    "educationalNews": [
-        {
-            "title": "Cómo detectar la trampa del sesgo de confirmación",
-            "snippet": "Naturalmente queremos creer historias que nos dan la razón. Aprendé las 3 preguntas que debés hacerte cada vez que un titular te haga enojar o alegrar al instante.",
-            "link": "#"
-        },
-        {
-            "title": "Manipulación de datos: La zona de peligro de los gráficos",
-            "snippet": "Los trucos de escala del eje Y pueden hacer que pequeñas variaciones parezcan crisis mundiales. Mirá estos ejemplos reales de gráficos corporativos engañosos.",
-            "link": "#"
-        }
-    ]
-}
+[
+  {
+    "id": 1,
+    "headline": "Último momento: Un estudio local muestra que el 100% de las personas que beben agua eventualmente sufren consecuencias de salud fatales.",
+    "source": "Correlation Daily",
+    "category": "Logical Fallacy",
+    "explanation": "Esto juega con un argumento defectuoso de correlación frente a causalidad. Si bien es cierto que todas las personas mueren, el consumo de agua no es la causa biológica de la mortalidad.",
+    "correctAnswer": "Logical Fallacy"
+  },
+  {
+    "id": 2,
+    "headline": "Audio filtrado revela que el director ejecutivo de una empresa tecnológica admite un plan secreto para reemplazar a todos los trabajadores remotos con hologramas el próximo mes.",
+    "source": "The Daily Buzzfeed",
+    "category": "Deepfake / AI Altered",
+    "explanation": "Este titular difunde una pista de audio sintética no verificada. La tecnología en entornos de trabajo con hologramas no está ni cerca de avanzar lo suficiente para un despliegue a escala global, lo que indica un deepfake fabricado para generar pánico y reacciones masivas.",
+    "correctAnswer": "Deepfake / AI Altered"
+  },
+  {
+    "id": 3,
+    "headline": "Un nuevo algoritmo inteligente identifica automáticamente a posibles criminales usando solo sus fotos de perfil con un 99.9% de precisión.",
+    "source": "Silicon Horizon",
+    "category": "AI Bias & Misinformation",
+    "explanation": "Esto afirma resolver un problema social complejo con un software defectuoso basado en rasgos físicos. Los modelos de IA entrenados con conjuntos de datos históricos reflejan los sesgos humanos y no pueden predecir con precisión la intención o el comportamiento criminal basándose en una fotografía estática.",
+    "correctAnswer": "AI Bias & Misinformation"
+  },
+  {
+    "id": 4,
+    "headline": "No creerás lo que este vegetal común de cocina le hace a tus arterias de la noche a la mañana (¡Los médicos están furiosos!).",
+    "source": "HealthHacks Global",
+    "category": "Clickbait",
+    "explanation": "Esto utiliza un lenguaje sensacionalista y emocional ('No creerás', 'Los médicos están furiosos') junto con una enorme brecha de curiosidad para manipular al lector para que haga clic, sin proporcionar ningún dato médico verificable.",
+    "correctAnswer": "Clickbait"
+  },
+  {
+    "id": 5,
+    "headline": "Las emisiones globales de carbono caen a cero de la noche a la mañana tras encender una máquina secreta de energía limpia en Suiza.",
+    "source": "EcoTruth Network",
+    "category": "Fake News",
+    "explanation": "Aunque es emocionante, esta noticia es completamente inventada. Un dispositivo capaz de eliminar por sí solo las emisiones globales de carbono de forma instantánea viola las leyes de la física y la logística de la infraestructura energética actual.",
+    "correctAnswer": "Fake News"
+  },
+  {
+    "id": 6,
+    "headline": "VIDEO: Alcalde es captado en cámara diciendo 'Odio absolutamente a este pueblo' durante una reunión comunitaria local.",
+    "source": "City Watchdog Portal",
+    "category": "Out-of-Context Media",
+    "explanation": "Este titular elimina un contexto vital. Las imágenes completas sin editar revelan que el alcalde estaba citando una carta enviada por un residente descontento para ilustrar un punto, no expresando sus propios sentimientos personales.",
+    "correctAnswer": "Out-of-Context Media"
+  },
+  {
+    "id": 7,
+    "headline": "Movimiento ciudadano arrasa en la nación: miles de ciudadanos reales publican repentinamente elogios idénticos a la nueva política de privacidad de un conglomerado tecnológico.",
+    "source": "TrendTracker News",
+    "category": "Astroturfing / Bot Network",
+    "explanation": "Este es un ejemplo clásico de 'astroturfing': enmascarar una campaña política o corporativa coordinada para que parezca un movimiento espontáneo de ciudadanos reales. El uso de frases idénticas en miles de cuentas indica una red de bots automatizada.",
+    "correctAnswer": "Astroturfing / Bot Network"
+  },
+  {
+    "id": 8,
+    "headline": "Estudio revela que el 85% de los chats grupales son en realidad personas esperando su turno para enviar un meme.",
+    "source": "The Onion Herald",
+    "category": "Satire / Parody",
+    "explanation": "Este titular proviene de una publicación satírica destinada al entretenimiento. Aunque hace una observación social divertida con la que muchos se identifican, es una parodia y no un estudio de investigación real realizado científicamente.",
+    "correctAnswer": "Satire / Parody"
+  },
+  {
+    "id": 9,
+    "headline": "Un nuevo avance científico confirma que tu pasatiempo favorito de la infancia predice perfectamente capacidades intelectuales de élite.",
+    "source": "Mindset Weekly",
+    "category": "Confirmation Bias Trap",
+    "explanation": "Este titular se dirige deliberadamente a la autoestima y al sesgo de confirmación del lector. Presenta una validación halagadora pero poco científica para manipular a los usuarios para que compartan el artículo sin verificar la metodología subyacente.",
+    "correctAnswer": "Confirmation Bias Trap"
+  },
+  {
+    "id": 10,
+    "headline": "GRÁFICO: Las ganancias corporativas se duplican en menos de tres meses bajo la estrategia del nuevo equipo de gestión.",
+    "source": "Metric Dynamics",
+    "category": "Data / Graph Manipulation",
+    "explanation": "El gráfico que acompaña la noticia manipuló el diseño al iniciar la escala del eje Y en un 95% en lugar del 0%. Este truco de recorte visual hace que una fluctuación menor y normal del 2% parezca un pico de ganancias masivo y explosivo.",
+    "correctAnswer": "Data / Graph Manipulation"
+  }
+]

@@ -9,15 +9,17 @@ export async function fetchDailyHeadline(locale = 'en') {
         }
 
         const data = await response.json();
-        return data.dailyHeadline;
+        return data;
     } catch (error) {
         console.error('Error fetching local puzzle data:', error);
 
         return {
+            id:0,
             headline: "Error loading puzzle.",
             source: "System",
             category: "Error",
-            explanation: "Could not retrieve the puzzle for the selected language."
+            explanation: "Could not retrieve the puzzle for the selected language.",
+            correctAnswer: 'Error'
         };
     }
 }

@@ -1,21 +1,82 @@
-{
-    "dailyHeadline": {
-        "headline": "Breaking: Local study shows 100% of people who drink water eventually suffer fatal health outcomes.",
-        "source": "Correlation Daily",
-        "category": "Logical Fallacy",
-        "explanation": "This plays on a flawed correlation vs causation argument. While true that all humans die, water consumption is not the structural cause of mortality.",
-        "correctAnswer": "Logical Fallacy"
-    },
-    "educationalNews": [
-        {
-            "title": "How to Spot a Confirmation Bias Trap",
-            "snippet": "We naturally want to believe stories that prove us right. Learn the 3 questions to ask yourself whenever a headline makes you instantly angry or happy.",
-            "link": "#"
-        },
-        {
-            "title": "Data Manipulation: The Graph Danger Zone",
-            "snippet": "Y-axis scaling tricks can make tiny variations look like world-ending crises. See real-world examples of misleading corporate charts analyzed.",
-            "link": "#"
-        }
-    ]
-}
+[
+  {
+    "id": 1,
+    "headline": "Breaking: Local study shows 100% of people who drink water eventually suffer fatal health outcomes.",
+    "source": "Correlation Daily",
+    "category": "Logical Fallacy",
+    "explanation": "This plays on a flawed correlation vs causation argument. While true that everyone who drinks water eventually dies, water consumption is not the biological cause of mortality.",
+    "correctAnswer": "Logical Fallacy"
+  },
+  {
+    "id": 2,
+    "headline": "Leaked Audio Reveals Tech CEO Admitting Secret Plan to Replace All Remote Workers with Holograms by Next Month.",
+    "source": "The Daily Buzzfeed",
+    "category": "Deepfake / AI Altered",
+    "explanation": "This headline spreads an unverified, synthetic audio track. Holographic workplace technology is nowhere near advanced enough for global scale deployment, indicating a fabricated deepfake designed for panic engagement.",
+    "correctAnswer": "Deepfake / AI Altered"
+  },
+  {
+    "id": 3,
+    "headline": "New Smart Algorithm Automatically Identifies Potential Criminals Using Just Their Profile Pictures with 99.9% Accuracy.",
+    "source": "Sillicon Horizon",
+    "category": "AI Bias & Misinformation",
+    "explanation": "This claims to solve a complex social issue with flawed 'phrenology-style' software. AI models trained on historical data sets reflect human biases and cannot accurately predict intent or criminal behavior based on a static photograph.",
+    "correctAnswer": "AI Bias & Misinformation"
+  },
+  {
+    "id": 4,
+    "headline": "You Won't Believe What This Common Kitchen Vegetable Does to Your Arteries Overnight (Doctors are Furious!).",
+    "source": "HealthHacks Global",
+    "category": "Clickbait",
+    "explanation": "This uses sensationalized, emotional language ('You Won't Believe', 'Doctors are Furious') and a massive curiosity gap to manipulate the reader into clicking, without providing any verifiable medical data.",
+    "correctAnswer": "Clickbait"
+  },
+  {
+    "id": 5,
+    "headline": "Global Carbon Emissions Fall to Zero Overnight as Secret Clean Energy Machine is Switched on in Switzerland.",
+    "source": "EcoTruth Network",
+    "category": "Fake News",
+    "explanation": "While exciting, this news is completely fabricated. A device capable of single-handedly eliminating global carbon emissions instantly violates the laws of physics and energy infrastructure logistics.",
+    "correctAnswer": "Fake News"
+  },
+  {
+    "id": 6,
+    "headline": "WATCH: Mayor Caught on Camera Saying 'I Absoutely Hate This Town' During Local Town Hall Meeting.",
+    "source": "City Watchdog Portal",
+    "category": "Out-of-Context Media",
+    "explanation": "This headline strips away vital context. The full unedited footage reveals the mayor was quoting a letter sent by a disgruntled resident to illustrate a point, not expressing their own personal feelings.",
+    "correctAnswer": "Out-of-Context Media"
+  },
+  {
+    "id": 7,
+    "headline": "Grassroots Movement Sweeps the Nation: Thousands of Real Citizens Suddenly Tweet Identical Praise for Tech Conglomerate's New Privacy Policy.",
+    "source": "TrendTracker News",
+    "category": "Astroturfing / Bot Network",
+    "explanation": "This is a classic example of 'astroturfing'—masking a coordinated political or corporate campaign to make it look like a spontaneous grassroots movement. Identical phrasing across thousands of accounts indicates an automated bot network.",
+    "correctAnswer": "Astroturfing / Bot Network"
+  },
+  {
+    "id": 8,
+    "headline": "Study Finds 85% of Group Chats are Actually Just People Waiting for Their Turn to Send a Meme.",
+    "source": "The Onion Herald",
+    "category": "Satire / Parody",
+    "explanation": "This headline originates from a satirical publication meant for entertainment. While it makes a funny and relatable social observation, it is a parody and not a real, scientifically conducted research study.",
+    "correctAnswer": "Satire / Parody"
+  },
+  {
+    "id": 9,
+    "headline": "New Scientific Breakthrough Confirms That Your Favorite Childhood Hobby Perfectly Predicts Elite Intellectual Capabilities.",
+    "source": "Mindset Weekly",
+    "category": "Confirmation Bias Trap",
+    "explanation": "This headline deliberately targets the reader's self-esteem and confirmation bias. It presents flattering, unscientific validation to manipulate readers into sharing the article without verifying the underlying methodology.",
+    "correctAnswer": "Confirmation Bias Trap"
+  },
+  {
+    "id": 10,
+    "headline": "GRAPH: Corporate Profits Double in Less Than Three Months Under New Management Team Strategy.",
+    "source": "Metric Dynamics",
+    "category": "Data / Graph Manipulation",
+    "explanation": "The accompanying chart manipulated the layout by starting the Y-axis scale at 95% instead of 0%. This visual truncation trick makes a minor, normal fluctuation of 2% look like a massive, explosive profit spike.",
+    "correctAnswer": "Data / Graph Manipulation"
+  }
+]

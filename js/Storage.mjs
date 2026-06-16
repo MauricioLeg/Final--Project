@@ -38,5 +38,5 @@ export function saveGameResult(isWin) {
 export function hasPlayedToday() {
     const lastPlayedDate = localStorage.getItem(lastPlayed);
     const todayStr = new Date().toISOString().split('T')[0]
-    return lastPlayed === todayStr
+    return lastPlayedDate === todayStr;
 }
