@@ -42,6 +42,7 @@ export function setupAuth() {
         submitBtn.textContent = 'Log In';
         toggleLink.textContent = 'Need an account? Register here'
         document.getElementById('auth-password')?.setAttribute('autocomplete', 'current-password');
+        document.getElementById('auth-username')?.setAttribute('autocomplete', 'username');
     }
     function setRegisterMode() {
         isLoginMode = false;
@@ -51,6 +52,7 @@ export function setupAuth() {
         submitBtn.textContent = 'Create Account';
         toggleLink.textContent = 'Already have an account? Log in here'
         document.getElementById('auth-password')?.setAttribute('autocomplete', 'new-password');
+        document.getElementById('auth-username')?.setAttribute('autocomplete', 'new-username');
     }
 
     loginLink.addEventListener('click', (e) => {
