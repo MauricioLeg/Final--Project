@@ -49,9 +49,10 @@ export async function fetchLiveNews(locale = 'en') {
 
     const lang = langMap[locale] || 'en';
     const url = `https://gnews.io/api/v4/search?q=media+literacy&lang=${lang}&max=3&apikey=${GNewsAPI}`;
+    const proxyURL = 'https://corsproxy.io/?';
 
     try {
-        const response = await fetch(url);
+        const response = await fetch(proxyURL + encodeURIComponent(url));
 
         if (!response.ok) {
             throw new Error('GNews API request failed');
