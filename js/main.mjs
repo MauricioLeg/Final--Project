@@ -1,5 +1,5 @@
 import { fetchDailyHeadline, fetchLiveNews } from "./NewsData.mjs";
-import { createPuzzleTemplate, createNewsFeedTemplate } from "./templates.mjs";
+import { createPuzzleTemplate, createNewsFeedTemplate, createNavBarAuthTemplate } from "./templates.mjs";
 import { verifyAnswer } from "./CompareText.mjs";
 import { getUserStats, saveGameResult, hasPlayedToday } from "./Storage.mjs";
 import { loadTranslations, applyTranslations, getAllTranslations, getTranslation } from "./languages.mjs";
@@ -15,17 +15,53 @@ document.addEventListener('DOMContentLoaded', async () => {
     const gamesContainer = document.querySelector('.games');
     const newsContainer = document.querySelector('.news');
     const langSelector = document.getElementById('language-selector');
+    const authNavContainer = document.getElementById('auth-nav-container');
 
+    function renderNavBar() {
+        if (!authNavContainer) return;
+
+        const currentSession = localStorage.getItem('active_user');
+        const translations = getAllTranslations();
+
+        authNavContainer.innerHTML = createNavBarAuthTemplate(currentSession, translations);
+
+        if (currentSession) {
+            const usernameBtn = document.getElementById('nav-username');
+            const dropdown = document.getElementById('user-dropdown');
+            const logout = document.getElementById('nav-logout');
+
+            usernameBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown?.classList.toggle('hidden');
+            });
+
+            logout?.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('active_user');
+                renderNavBar();
+                window.location.reload();
+            });
+        } else {
+            setupAuth();
+        }
+    }
+    
+    document.addEventListener('click', () => {
+        document.getElementById('user-dropdown')?.classList.add('hidden');
+    });
+
+    let preferredLocale = localStorage.getItem('debunked_locale') || 'en';
+    langSelector.value = preferredLocale;
+    
+    await loadTranslations(preferredLocale);
+    applyTranslations()
+    renderNavBar();
+    displayContactModal();
+    
     if (!gamesContainer || !newsContainer) {
         console.log("Not on the homepage. Skipping game initialization.");
         return; 
     }
-
-    let preferredLocale = localStorage.getItem('debunked_locale') || 'en';
-    langSelector.value = preferredLocale;
-
-    await loadTranslations(preferredLocale);
-    applyTranslations()
     
     try {
         let activePuzzle;
@@ -57,19 +93,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             await loadTranslations(preferredLocale);
             applyTranslations();
-
+            renderNavBar();
             renderPageContent();
         })
-
-        displayContactModal();
-        setupAuth();
 
         gamesContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('choice-btn')) {
                 const selected = e.target.getAttribute('data-answer');
                 const isCorrect = verifyAnswer(selected, activePuzzle.correctAnswer);
 
-                const updatedStats = saveGameResult(isCorrect);
+                saveGameResult(isCorrect);
                 disableGameButtons();
                 
                 const feedbackDiv = document.getElementById('feedback');

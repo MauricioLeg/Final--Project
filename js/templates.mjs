@@ -40,3 +40,21 @@ export function createNewsFeedTemplate(articles, translations = {}) {
         </div>
     `;
 }
+
+export function createNavBarAuthTemplate(username, translations = {}) {
+    if (username) {
+        return `
+            <div class="user-profile-menu">
+                <button id="nav-username" class="nav-username-btn">👤 ${username} ▾</button>
+                <div id="user-dropdown" class="dropdown-content hidden">
+                    <a href="#" id="nav-logout">${translations.nav_logout || 'Log Out'}</a>
+                </div>
+            </div>
+        `;
+    }
+
+    return `
+        <a href="#" id="nav-login" data-i18n="nav_login">Log In</a>
+        <a href="#" id="nav-register" data-i18n="nav_register">Register</a>
+    `;
+}

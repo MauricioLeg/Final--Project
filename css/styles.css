@@ -51,6 +51,46 @@ body {
     justify-content: center;
 }
 
+/************** User profile button styling **************/
+.user-profile-menu {
+    position: relative;
+    display: inline-block;
+}
+.nav-username-btn {
+    background: none;
+    border: none;
+    color: var(--text-color, #ffffff);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    min-width: 120px;
+    z-index: 1000;
+    overflow: hidden;
+}
+.dropdown-content a {
+    color: #333333 !important;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    text-align: right;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.hidden {
+    display: none;
+}
+
 /*********************** Main content ***********************/
 main {
     flex: 1;

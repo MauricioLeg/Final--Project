@@ -14,6 +14,8 @@ export function setupAuth() {
 
     let isLoginMode = false;
 
+    if (!loginLink || !registerLink) return;
+
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
     function openModal(mode) {
@@ -91,8 +93,12 @@ export function setupAuth() {
                 const userData = JSON.parse(storedUser);
                 if (userData.password === password) {
                     showFeedback(`Welcome back, ${username}!`, 'success');
-                    sessionStorage.setItem('active-user', username);
-                    setTimeout(closeModal, 1500);
+                    localStorage.setItem('active_user', username);
+
+                    setTimeout(() => {
+                        closeModal();
+                        window.location.reload();
+                    }, 1500);
                 } else {
                     showFeedback('Incorrect password', 'error');
                 }
@@ -119,10 +125,13 @@ export function setupAuth() {
             }
 
             localStorage.setItem(`user_${username}`, JSON.stringify(newProfile));
-            sessionStorage.setItem('active_user', username);
+            localStorage.setItem('active_user', username);
 
             showFeedback('Account created successfully', 'success');
-            setTimeout(closeModal, 1500);
+            setTimeout(() => {
+                closeModal();
+                window.location.reload()
+            }, 1500);
         }
     });
 
