@@ -41,6 +41,7 @@ export function setupAuth() {
         ageInput.removeAttribute('required');
         submitBtn.textContent = 'Log In';
         toggleLink.textContent = 'Need an account? Register here'
+        document.getElementById('auth-password')?.setAttribute('autocomplete', 'current-password');
     }
     function setRegisterMode() {
         isLoginMode = false;
@@ -49,6 +50,7 @@ export function setupAuth() {
         ageInput.setAttribute('required', 'true');
         submitBtn.textContent = 'Create Account';
         toggleLink.textContent = 'Already have an account? Log in here'
+        document.getElementById('auth-password')?.setAttribute('autocomplete', 'new-password');
     }
 
     loginLink.addEventListener('click', (e) => {
